@@ -2,7 +2,6 @@ function GEN_TEMPLATE(count) {
     return `
         <div style="display: block;">
             <input class="new-tag-input" id="input-${count+1}" type="text">
-            <button class="btn-red">remove</button>
         </div>
     ` 
 }
