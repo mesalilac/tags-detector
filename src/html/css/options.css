@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 200px;
+}
+
+.new-tag-input {
+    outline: none;
+    border: 1px solid rgb(32, 31, 31);
+    border-radius: 1px;
+    margin-top: 5px;
+    padding: 2px 2px;
+}
+
+#save {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 4px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-blue {
+    color: rgb(243, 241, 241);
+    background-color: rgb(41, 94, 175);
+}
+
+.btn-green {
+    color: rgb(243, 241, 241);
+    background-color: rgb(33, 175, 68);
+}
+
+.btn-red {
+    color: rgb(243, 241, 241);
+    background-color: rgb(175, 33, 33);
+}
+
