@@ -1,0 +1,10 @@
+{
+    "name": "tags detector",
+    "description": "detect tags in hentai websites and warn the user",
+    "version": "1.0",
+    "manifest_version": 2,
+    "options_ui": {
+        "page": "src/html/options.html",
+        "open_in_tab": false
+    }
+}  
