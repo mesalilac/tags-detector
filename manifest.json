@@ -6,5 +6,8 @@
     "options_ui": {
         "page": "src/html/options.html",
         "open_in_tab": false
-    }
+    },
+    "permissions": [
+        "storage"
+    ]
 }  
