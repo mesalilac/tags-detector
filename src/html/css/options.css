@@ -23,6 +23,14 @@ body {
     padding: 5px 10px;
 }
 
+#reset {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
 button {
     outline: none;
     border: none;
