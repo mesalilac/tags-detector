@@ -12,5 +12,14 @@
     },
     "background": {
         "scripts": ["src/js/index.js"]
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://nhentai.net/*"
+            ],
+            "js": ["src/js/content.js"]
+        }
+    ]
+
 }
