@@ -1,27 +1,86 @@
-function GEN_TEMPLATE(count) {
-    return `
-        <div style="display: block;">
-            <input class="new-tag-input" id="input-${count+1}" type="text">
-        </div>
-    ` 
-}
+document.addEventListener('DOMContentLoaded', () => {
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
-document.getElementById("add-tag").addEventListener("click", e => {
-    let contener_child_count = document.getElementById("contener").childElementCount
-    var values = []
+    // load saved blacklist
+    chrome.storage.sync.get("blacklist",(res) => {
+        let blacklist = res.blacklist
 
-    for (let i = 1; i <= contener_child_count; i++) {
-        var elm = document.getElementById(`input-${i}`)
-        if (elm) {
-            values.push(elm.value);
+        if (blacklist === undefined || blacklist.length == 0) {
+            document.getElementById("contener").innerHTML += `
+                <div style="display: block;">
+                    <input class="new-tag-input" id="input-1" type="text">
+                </div>
+            `
+        } else {
+            for (let i = 0; i < blacklist.length; i++) {
+                document.getElementById("contener").innerHTML += `
+                    <div style="display: block;">
+                        <input class="new-tag-input" id="input-${i+1}" type="text" value="${blacklist[i]}">
+                    </div>
+                `
+            }
         }
+    })
+
+    // add new input form when add tag button pressed
+    function addNewInputForm(count) {
+        document.getElementById("contener").innerHTML += `
+            <div style="display: block;">
+                <input class="new-tag-input" id="input-${count+1}" type="text">
+            </div>
+        `
     }
 
-    document.getElementById("contener").innerHTML += GEN_TEMPLATE(contener_child_count)
+    document.getElementById("add-tag").addEventListener("click", () => {
+        let contener_child_count = document.getElementById("contener").childElementCount
+        let values = []
 
-    for (let i = 0; i < contener_child_count; i++) {
-        document.getElementById(`input-${i+1}`).value = values[i]
-    }
+
+        for (let j = 1; j <= contener_child_count; j++) {
+            var elm = document.getElementById(`input-${j}`)
+            if (elm) {
+                values.push(elm.value);
+            }
+        }
+    
+        addNewInputForm(contener_child_count)
+    
+        for (let i = 0; i < contener_child_count; i++) {
+            document.getElementById(`input-${i+1}`).value = values[i]
+        }
+    })
+    
+    document.getElementById("save").addEventListener("click", async () => {
+        var blacklist = []
+        
+        for (let j = 1; j <= document.getElementById("contener").childElementCount; j++) {
+            var elm = document.getElementById(`input-${j}`)
+            if (elm && elm.value != "") {
+                blacklist.push(elm.value);
+            }
+        }
+
+        document.getElementById("save").textContent = "done!"
+
+        await sleep(670)
+
+        document.getElementById("save").textContent = "save"
+
+
+        chrome.storage.sync.set({"blacklist": blacklist}, () => {
+            console.log("blacklist update");
+        })
+        
+    })
+
+    document.getElementById("reset").addEventListener("click", () => {
+        chrome.storage.sync.set({"blacklist": []}, () => {
+            console.log("reset settings");
+        })
+
+        location.reload()
+    })
+    
 })
-
-document.getElementById("save").addEventListener("click", e => {})
