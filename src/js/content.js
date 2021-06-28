@@ -28,11 +28,10 @@ function check_tags() {
     }
 
     if (detected_tags.length >= 1) {
-      detected_tags = detected_tags.join(", ")
+      detected_tags = detected_tags.join(" and ")
       console.log(detected_tags);
-      
+      alert(`warning blacklisted tags detected: ${detected_tags}!`)
     }
-    
   })
 }
 
