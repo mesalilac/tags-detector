@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     
-    document.getElementById("save").addEventListener("click", async () => {
+    document.getElementById("save").addEventListener("click", () => {
         var blacklist = []
         
         for (let j = 1; j <= document.getElementById("contener").childElementCount; j++) {
@@ -64,11 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById("save").textContent = "done!"
 
-        await sleep(670)
-
-        document.getElementById("save").textContent = "save"
-
-
+        sleep(670).then(() => {
+            document.getElementById("save").textContent = "save"
+        })
+        
         chrome.storage.sync.set({"blacklist": blacklist}, () => {
             console.log("blacklist update");
         })
