@@ -26,8 +26,13 @@ function check_tags() {
         detected_tags.push(get.tags[i])
       }
     }
-    console.log(detected_tags.join(", "));
 
+    if (detected_tags.length >= 1) {
+      detected_tags = detected_tags.join(", ")
+      console.log(detected_tags);
+      
+    }
+    
   })
 }
 
