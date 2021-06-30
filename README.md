@@ -4,3 +4,4 @@
 
 1. [nhentai.net](https://www.nhentai.net)
 
+#TODO add hentaidude.com
