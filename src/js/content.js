@@ -1,3 +1,11 @@
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.message === 'reload') {
+      console.log(request.url)
+      location.reload()
+    }
+})
+
 class Info {
   constructor() {
     this.tags = this.findtags()
@@ -29,9 +37,26 @@ class Info {
 
       if (tags_list) {
         for (let i = 0; i < tags_list.childElementCount; i++) {
-            let tag_selector = document.querySelector(`#aboutid > div > div:nth-child(3) > a:nth-child(${i - 1})`)
+          let tag_selector = document.querySelector(`#aboutid > div > div:nth-child(3) > a:nth-child(${i - 1})`)
           if (tag_selector) {
             var tag = tag_selector.textContent.toLowerCase()
+            list.push(tag)
+          }
+        }
+        return list
+      }
+    }
+    
+    if (hostname == "hanime.tv") {
+      var tags_list = document.getElementsByClassName("hvpis-text")[0]
+      var list = []
+
+      if (tags_list) {
+        for (let i = 1; i <= tags_list.childElementCount; i++) {
+          let tag_selector = document.querySelector(`.hvpis-text.grey--text.text--lighten-1 > a:nth-child(${i})`)
+          if (tag_selector) {
+            var tag = tag_selector.textContent.toLowerCase()
+
             list.push(tag)
           }
         }
