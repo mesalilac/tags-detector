@@ -18,7 +18,25 @@
 how to install.
 
 ## **Chrome**
-    ...
+- First click the green button
+<img src="images/1.png">
+
+- Then click Download ZIP
+<img src="images/2.png">
+
+- unzip the downloaded file
+
+- write chrome://extensions/ into your address bar
+
+- enable the developer mode (top right corner)
+
+<img src="images/3.png">
+
+- press the "Load Unpacked" button (top left corner)
+
+<img src="images/4.png">
+
+- go inside the unzipped extension folder and press "Select a folder"
 
 ## **Usage**
     ...
