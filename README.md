@@ -1,7 +1,12 @@
 # tags-detector
+<center>
+
+![](icons/128.png)
+
+</center>
 
 
-### Tags detector work on: 
+### Tags detector websites: 
 
-nhentai.net
+1. nhentai.net
 
