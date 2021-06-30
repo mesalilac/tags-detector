@@ -4,5 +4,5 @@
 
 ### Tags detector websites: 
 
-1. [nhentai.net](nhentai.net)
+1. [nhentai.net](https://www.nhentai.net)
 
