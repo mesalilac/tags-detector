@@ -1,10 +1,6 @@
 # tags-detector
-<center>
 
-![](icons/128.png)
-
-</center>
-
+<img align="center" src="icons/128.png"></img>
 
 ### Tags detector websites: 
 
