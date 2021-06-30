@@ -4,11 +4,15 @@
     "version": "1.0",
     "manifest_version": 2,
     "permissions": [
-        "storage"
+        "storage",
+        "tabs"
     ],
     "options_ui": {
         "page": "src/html/options.html",
         "open_in_tab": false
+    },
+    "background": {
+        "scripts":["src/js/background.js"]
     },
     "content_scripts": [
         {
