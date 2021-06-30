@@ -10,9 +10,6 @@
         "page": "src/html/options.html",
         "open_in_tab": false
     },
-    "background": {
-        "scripts": ["src/js/index.js"]
-    },
     "content_scripts": [
         {
             "matches": [
