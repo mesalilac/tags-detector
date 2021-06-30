@@ -14,7 +14,8 @@
         {
             "matches": [
                 "https://nhentai.net/*",
-                "https://hentaidude.com/*"
+                "https://hentaidude.com/*",
+                "https://hanime.tv/*"
             ],
             "js": ["src/js/content.js"]
         }
