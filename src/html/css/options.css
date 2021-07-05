@@ -35,7 +35,7 @@ button {
     outline: none;
     border: none;
     padding: 4px 6px;
-    border-radius: 3px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
@@ -52,5 +52,19 @@ button {
 .btn-red {
     color: rgb(243, 241, 241);
     background-color: rgb(175, 33, 33);
+}
+
+
+
+.btn-blue:hover {
+    background-color: rgb(38, 88, 163);
+}
+
+.btn-green:hover {
+    background-color: rgb(33, 160, 65);
+}
+
+.btn-red:hover {
+    background-color: rgb(161, 32, 32);
 }
 
