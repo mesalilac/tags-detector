@@ -13,6 +13,7 @@
 1. [nhentai.net](https://www.nhentai.net)
 2. [hentaidude.com](https://hentaidude.com)
 3. [hanime.tv](https://hanime.tv)
+4. [hentai.tv](https://hentai.tv)
 
 # Installation
 how to install.
