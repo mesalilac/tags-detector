@@ -39,4 +39,19 @@ how to install.
 - go inside the unzipped extension folder and press "Select a folder"
 
 ## **Usage**
-    ...
+- Go to extension options
+
+- Add tags you don't like
+
+<img src="images/6.png">
+
+<br>
+<br>
+<br>
+
+- **Click the save button**
+
+<img src="images/7.png">
+
+- now you can open any hentai website from the [websites list](#Tags-detector-websites)
+
