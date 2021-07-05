@@ -19,7 +19,8 @@
             "matches": [
                 "https://nhentai.net/*",
                 "https://hentaidude.com/*",
-                "https://hanime.tv/*"
+                "https://hanime.tv/*",
+                "https://hentai.tv/hentai/*"
             ],
             "js": ["src/js/content.js"]
         }
