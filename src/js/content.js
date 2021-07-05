@@ -1,7 +1,6 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.message === 'reload') {
-      console.log(request.url)
       location.reload()
     }
 })
@@ -13,6 +12,15 @@ class Info {
 
   getElementByXpath(path) {
     return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  gotoBottom(selector){
+    var element = document.querySelector(selector)
+    element.scrollTop = element.scrollHeight - element.clientHeight;
   }
 
   findtags() {
@@ -62,6 +70,18 @@ class Info {
         }
         return list
       }
+    }
+
+    if (hostname == "hentai.tv") {
+      var tags_list = document.querySelector("#aa-wp > div.bd > div > div > main > article > footer > p").getElementsByTagName("a")
+      var list = []
+      
+      for (let i = 0; i < tags_list.length; i++) {
+        var tag = tags_list[i].textContent.toLowerCase()
+        
+        list.push(tag)
+      }
+      return list
     }
   }
 }
