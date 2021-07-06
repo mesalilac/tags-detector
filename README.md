@@ -1,4 +1,4 @@
-<img src="images/bannerbanner.png">
+<img src="images/banner.png">
 
 ## **Table of contents**
 1. [**websites**](#Tags-detector-websites)
