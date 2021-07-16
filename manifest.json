@@ -20,6 +20,7 @@
                 "https://nhentai.net/*",
                 "https://hentaidude.com/*",
                 "https://hanime.tv/*",
+                "https://members.hanime.tv/*",
                 "https://hentai.tv/hentai/*"
             ],
             "js": ["src/js/content.js"]
