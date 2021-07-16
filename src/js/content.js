@@ -55,7 +55,7 @@ class Info {
       }
     }
     
-    if (hostname == "hanime.tv") {
+    if (hostname == "hanime.tv" || hostname == "members.hanime.tv") {
       var tags_list = document.getElementsByClassName("hvpis-text")[0]
       var list = []
 
